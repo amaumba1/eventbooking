@@ -10,6 +10,7 @@ import (
 	"github.com/amaumba1/eventbooking/src/lib/persistence/dblayer"
 )
 
+
 func main() {
 
 	confPath := flag.String("conf", `.\configuration\config.json`, "flag to set the path to the configuration json file")
@@ -21,4 +22,5 @@ func main() {
 	dbhandler, _ := dblayer.NewPersistenceLayer(config.Databasetype, config.DBConnection)
 	//RESTful API start
 	log.Fatal(rest.ServeAPI(config.RestfulEndpoint, dbhandler))
+	
 }
