@@ -1,1 +1,1 @@
-# eventbooking
+# Microservices for eventbooking
